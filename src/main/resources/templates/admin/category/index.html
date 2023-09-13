@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{admin/fragments/head :: head}"></head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+    <header th:replace="~{admin/fragments/header :: header}"></header>
+
+    <!-- =============================================== -->
+
+    <!-- Left side column. contains the sidebar -->
+    <div th:replace="~{admin/fragments/aside :: aside}">
+
+    </div>
+
+
+    <!-- =============================================== -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                Blank page
+                <small>it all starts here</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#">Examples</a></li>
+                <li class="active">Blank page</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+
+            <div class="container mt-4">
+                <h1>Bảng với Bootstrap</h1>
+                 <table th:replace="~{admin/fragments/table-admin :: table-admin}"></table>
+            </div>
+
+            <!-- Modal Sửa -->
+          <div th:replace="~{admin/fragments/model-update :: modalUpdate}"></div>
+
+             Modal Thêm
+            <div th:replace="~{admin/fragments/model-Add.html :: modalAdd}"></div>
+
+
+
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer th:replace="~{admin/fragments/footer :: footer}"></footer>
+
+</div>
+
+
+<div th:replace="~{admin/fragments/script :: script}"></div>
+</body>
+</html>

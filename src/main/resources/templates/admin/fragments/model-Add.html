@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true" th:fragment = "modalAdd">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalLabel">Thêm Dữ Liệu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form th:object="${newProduct}" id="dataForm" method="post" th:action="@{/admin/category/add}">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" th:field="*{nameProduct}" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" id="price" name="price" th:field="*{PRICE}" placeholder="Price">
+                    </div>
+                    <div class="form-group">
+                        <label for="descriptions">Descriptions</label>
+                        <input type="text" class="form-control" id="descriptions" name="descriptions" th:field="*{DESCRIPTION}" placeholder="Descriptions">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-success">Thêm</button>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-success">Thêm</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
