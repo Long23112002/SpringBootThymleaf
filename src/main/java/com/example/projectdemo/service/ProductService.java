@@ -24,4 +24,15 @@ public class ProductService {
     public Products addProducts(Products products){
         return productsRepo.save(products);
     }
+
+    public int updateProductInfo(Integer productId, String newName, Double newPrice, String newDescription) {
+        int rowsUpdated = productsRepo.updateProductInfo(productId, newName, newPrice, newDescription);
+        if (rowsUpdated > 0) {
+            return rowsUpdated;
+        } else {
+            return 0;
+        }
+    }
+
+
 }
